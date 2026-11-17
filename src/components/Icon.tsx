@@ -1,0 +1,4 @@
+import { Apple, ArrowDown, ArrowRight, ArrowUp, BookOpen, Check, ChevronRight, Heart, History, Info, Leaf, Menu, MessageCircle, Plus, Search, ShieldCheck, Sparkles, Stethoscope, Syringe, Trash2, X } from 'lucide-react';
+const icons = { apple: Apple, down: ArrowDown, arrow: ArrowRight, send: ArrowUp, book: BookOpen, check: Check, chevron: ChevronRight, heart: Heart, history: History, info: Info, leaf: Leaf, menu: Menu, chat: MessageCircle, plus: Plus, search: Search, shield: ShieldCheck, sparkles: Sparkles, logo: Stethoscope, syringe: Syringe, trash: Trash2, close: X };
+export type IconName = keyof typeof icons;
+export function Icon({ name, size = 20 }: { name: IconName; size?: number }) { const Component = icons[name]; return <Component size={size} strokeWidth={1.8} aria-hidden="true" />; }
